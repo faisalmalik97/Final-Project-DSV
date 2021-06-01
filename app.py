@@ -23,17 +23,17 @@ from pandas import Grouper
 from matplotlib import pyplot
 from pandas import read_csv
 
-#read the csv file
-df = pd.read_csv('APT.csv',index_col="Date", parse_dates=True)
-df.head()
+# #read the csv file
+# df = pd.read_csv('APT.csv',index_col="Date", parse_dates=True)
+# df.head()
 
-# plot the historic data
-plt.figure(figsize=(16,8))
-plt.title('APT ASX Stock Price', fontsize = 18)
-plt.xlabel('Days', fontsize= 18)
-plt.ylabel('Close Price AUD ($)', fontsize = 18)
-plt.plot(df['Close'])
-plt.show()
+# # plot the historic data
+# plt.figure(figsize=(16,8))
+# plt.title('APT ASX Stock Price', fontsize = 18)
+# plt.xlabel('Days', fontsize= 18)
+# plt.ylabel('Close Price AUD ($)', fontsize = 18)
+# plt.plot(df['Close'])
+# plt.show()
 
 #################################################
 # Flask Routes
