@@ -13,8 +13,7 @@ app = Flask(__name__)
 # create route that renders index.html template
 @app.route("/")
 def echo():
-    return render_template("index.html")
-    #, text="Serving up cool text from the Flask server!!")
+    return render_template("index.html", text="Stock Chart")
 
 @app.route("/addtwo/<number>")
 def addTwo(number):
