@@ -15,10 +15,10 @@ app = Flask(__name__)
 def echo():
     return render_template("index.html", text="Stock Chart")
 
-@app.route("/addtwo/<number>")
-def addTwo(number):
-    newNumber = int(number)+2
-    return str(newNumber)
+# @app.route("/addtwo/<number>")
+# def addTwo(number):
+#     newNumber = int(number)+2
+#     return str(newNumber)
 
 
 if __name__ == "__main__":

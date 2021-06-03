@@ -2,30 +2,39 @@
 <html>
 
 <head>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta charset="utf-8">
   <title>Stock Price Pridictor</title>
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css"> -->
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.7/d3.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <!-- <link rel="stylesheet" href="static/css/style.css"> -->
 </head>
 
 <body>
-  <!-- <div class="wrapper">
-    <nav class="navbar navbar-default">
+  <div class="wrapper">
+     <nav class="navbar navbar-default">
       <div class="container-fluid">
-        <div class="navbar-header"> -->
-          <!-- <a class="navbar-brand" href="index.html"> -->
-            <!-- <img loading="lazy" class="wp-image-1422 avia_image" src="static/images/AI.jpeg"   height="400" width="1400" itemprop="thumbnailUrl">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">
+            <!-- <img loading="lazy" class="wp-image-1422 avia_image" src="static/images/AI.jpeg"   height="400" width="1400" itemprop="thumbnailUrl"> -->
           </a>
         </div>
       </div>
-    </nav> -->
+    </nav> 
+  </div>
     <!-- <div class="hero text-center"> -->
+
+      <div id="plot"></div>
+      <script src="/static/js/plots.js"></script>
+
+      
       <div>
       <h1>{{ text }}</h1>
       <image src="/static/images/APTchart.jpeg"></image>
-      <!-- <p>Stock Price Pridictor</p> -->
+      <p>Stock Price Pridictor</p>
     </div>
 
     <div>
@@ -46,64 +55,12 @@
       <!-- <p>Stock Price Pridictor</p> -->
     </div>
 
-    <!-- <div class="container">
-      <div class="row margin-top-50">
-        <div class="col-md-12">
-          <aside class="filters">
-            <div class="panel panel-default">
-              <div class="panel-heading">Search AI Database</div>
-              <div class="panel-body">
-                <div class="form-group">
-                  <ul class="list-group" id="filters">
-                    <li class="filter list-group-item">
-                      <label for="date">Enter Country name</label>
-                      <input class="form-control" id="Country" type="text" placeholder="Australia">
-                    </li>
-                    <li class="filter list-group-item">
-                      <label for="city">Enter a City name</label>
-                      <input class="form-control" id="City" type="text" placeholder="Sydney">
-                    </li>
-                    <li class="filter list-group-item">
-                      <label for="state">Enter Company Name</label>
-                      <input class="form-control" id="Name" type="text" placeholder="3DLOOK">
-                    </li>
-                    <li class="filter list-group-item">
-                      <label for="country">Enter a Catergory</label>
-                      <input class="form-control" id="Category" type="text" placeholder="Core AI Automation Fintech">
-                    </li>
-                    <li class="filter list-group-item">
-                      <label for="shape">Enter a website</label>
-                      <input class="form-control" id="Website" type="text" placeholder="https://www.hummingbird.ai/">
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </aside>
-        </div>
-        <div class="col-md-8">
-          <div id="table-area" class="">
-            <h1 class="text-center loader" id="loader">AI Companies Database</h1>
-            <table id="ufo-table" class="table table-striped">
-              <thead>
-                <tr>
-                  <th class="table-head">Country</th>
-                  <th class="table-head">City</th>
-                  <th class="table-head">Company</th>
-                  <th class="table-head">Category</th>
-                  <th class="table-head">Website</th>
-                </tr>
-              </thead>
-              <tbody></tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div> -->
+
+
     <!-- <footer class="footer">
       <span class="bottom">Final Project </span>
-    </footer> -->
-  </div>
+    </footer>
+  </div> -->
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
   <script src="static/js/data.js"></script>
   <script src="static/js/app.js"></script> -->
