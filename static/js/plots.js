@@ -1,8 +1,10 @@
-// var apiKey = "YOUR KEY HERE";
+// D3.js-based candlestick charts in javascript with Plotly
 
 /* global Plotly */
-var url =
-  `https://www.quandl.com/api/v3/datasets/WIKI/AMZN.json?start_date=2016-10-01&end_date=2017-10-01&api_key=CzenFuuZimy84KFz61Kf`;
+// var url =
+//   `https://www.quandl.com/api/v3/datasets/WIKI/FB.json?start_date=2016-10-01&end_date=2021-05-01&api_key=CzenFuuZimy84KFz61Kf`;
+  var url =
+  `https://www.quandl.com/api/v3/datasets/WIKI/FB.json?start_date=2016-10-01&end_date=2021-05-01&api_key=CzenFuuZimy84KFz61Kf`;
 
 /**
  * Helper function to select stock data
@@ -31,6 +33,9 @@ function buildPlot() {
     var startDate = data.dataset.start_date;
     var endDate = data.dataset.end_date;
     var dates = unpack(data.dataset.data, 0);
+    var openingPrices = unpack(data.dataset.data, 1);
+    var highPrices = unpack(data.dataset.data, 2);
+    var lowPrices = unpack(data.dataset.data, 3);
     var closingPrices = unpack(data.dataset.data, 4);
 
     var selectorOptions = {
@@ -55,25 +60,40 @@ function buildPlot() {
           count: 1,
           label: '1y'
       }, {
+        step: 'year',
+        stepmode: 'backward',
+        count: 5,
+        label: '5y'
+    },{
+      step: 'year',
+      stepmode: 'backward',
+      count: 10,
+      label: '10y'
+  },{
           step: 'all',
       }],
     };
 
     var trace1 = {
-      type: "scatter",
-      mode: "lines",
-      name: name,
       x: dates,
-      y: closingPrices,
-      line: {
-        color: "#17BECF"
-      }
+      close: closingPrices,
+      high: highPrices,
+      low: lowPrices,
+      open: openingPrices,
+
+      // cutomise colors
+      increasing: {line: {color: 'green'}},
+      decreasing: {line: {color: 'red'}},
+
+      type: 'candlestick',
+      xaxis: 'x',
+      yaxis: 'y'
     };
 
     var data = [trace1];
 
     var layout = {
-      title: `${stock} closing prices`,
+      title: `${stock} stock Candle Stick Chart`,
       xaxis: {
         rangeselector: selectorOptions,
         rangeslider: {}

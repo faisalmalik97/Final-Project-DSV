@@ -10,6 +10,29 @@ body {
   margin: 0;
 }
 
+body {background-color: rgb(198, 215, 221);}
+
+/* Works on Firefox */
+* {
+  scrollbar-width: thick;
+  scrollbar-color: red rgb(0, 255, 85);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgb(0, 255, 85);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: red;
+  border-radius: 20px;
+  border: 3px solid rgb(0, 255, 85);
+}
+
 /* The wrapper contains all of the page's content besides the footer, which is pushed to the bottom of the page */
 .wrapper {
   position: relative;
@@ -43,54 +66,6 @@ body {
   margin: 0;
 }
 
-/* This CSS styles the ufo icon in the navbar */
-.nav-ufo {
-  position: absolute;
-  bottom: 5px;
-  left: 150px;
-  width: 35px;
-  color: white;
-}
-
-/* Adding styles to the aside and filter form */
-.ufo-form {
-  margin-top: 50px;
-}
-
-.filters .panel-body {
-  padding: 0;
-}
-
-.filters {
-  margin-top: 10px;
-}
-
-select {
-  display: block;
-  width: 100%;
-  padding: 8px;
-  color: #8e979f;
-  outline: none;
-}
-
-#table-area th {
-  text-align: center;
-}
-
-#table-area th:first-child,
-#table-area th:nth-child(2),
-#table-area th:nth-child(6) {
-  min-width: 70px;
-}
-
-.loader {
-  margin-top: 50px;
-}
-
-.margin-top-50 {
-  margin-top: 50px;
-}
-
 /* The styles for the parallax */
 .hero {
   position: relative;
@@ -104,18 +79,6 @@ select {
   background-size: cover;
 }
 
-.hero h1 {
-  margin-top: 200px;
-  font-size: 0.1rem;
-  animation: title 1.2s forwards linear;
-}
-
-.hero p {
-  font-size: 2rem;
-  opacity: 0;
-  animation: subtitle 1.2s forwards linear;
-  animation-delay: 1.2s;
-}
 
 /* input placeholder color changes */
 .form-control::-webkit-input-placeholder {
@@ -160,41 +123,6 @@ select {
     display: none;
   }
 
-  #table-area tr td:first-child {
-    font-size: 1.8em;
-    font-weight: bold;
-    background: #d85e5e;
-  }
-
-  #table-area tr td:last-child {
-    margin-bottom: 20px;
-  }
-
-  #table-area tr td:last-child::after {
-    display: block;
-    width: 100%;
-    height: 1px;
-    margin-top: 20px;
-    content: " ";
-    background: rgb(99, 33, 8);
-  }
-
-  #table-area td {
-    font-size: 1.25em;
-  }
-
-  #table-area tbody td {
-    display: block;
-    text-align: center;
-  }
-
-  #table-area tbody td::before {
-    display: block;
-    font-size: 1.4em;
-    font-weight: bold;
-    text-align: center;
-    content: attr(data-th);
-  }
 
   .pagination li {
     font-size: 0.6em;
